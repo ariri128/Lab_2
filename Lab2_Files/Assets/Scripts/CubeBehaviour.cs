@@ -10,7 +10,8 @@ public class CubeBehaviour : ShapeBehaviour
         return size > 2f ? "The cubes' sizes cannot be bigger than 2!" : null;
     }
 
-    private void Update()
+    // Called automatically whenever a serialized field is changed in the Inspector
+    private void OnValidate()
     {
         transform.localScale = Vector3.one * size;
     }
